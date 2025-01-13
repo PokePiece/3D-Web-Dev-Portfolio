@@ -2,17 +2,17 @@ import { PerspectiveCamera } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import React, { Suspense } from 'react'
 import CanvasLoader from '../components/CanvasLoader'
-import HackerRoom from '../components/HackerRoom'
 import { Leva, useControls } from 'leva'
 import { xor } from 'three/tsl'
 import { useMediaQuery } from 'react-responsive'
 import { calculateSizes } from './constants'
 import Target from '../components/Target'
 import ReactLogo from '../components/ReactLogo'
-import Cube from '../components/Cube'
 import Rings from '../components/Rings'
 import HeroCamera from '../components/HeroCamera'
 import Button from '../components/Button'
+import FutureKeyboard from '../components/FutureKeyboard'
+import Apple from '../components/Apple'
 
 const Hero = () => {
 
@@ -64,10 +64,10 @@ const Hero = () => {
     const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
     return (
-        <section className="min-h-screen border-2 border-blue-500 w-full flex-col relative">
-            <div className="w-full mx-auto flex flex-col sm:mt-30 mt-20 c-space gap-3">
-                <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans">Hi, I am PokePiece <span className="waving-hand">👋</span></p>
-                <p className="hero_tag text-gray_gradient">Building Products & Brands</p>
+        <section className="min-h-screen border-2 border-purple-500 w-full flex-col relative" id="home">
+            <div className="w-full mx-auto flex flex-col sm:mt-30 mt-24 c-space gap-3">
+                <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans">I <span className="text-purple-600">am</span> PokePiece </p>
+                <p className="hero_tag text-gray_gradient">Designing Tools & Legacies</p>
             </div>
 
             <div className="w-full h-full absolute inset-0">
@@ -79,19 +79,19 @@ const Hero = () => {
                         <PerspectiveCamera makeDefault position={[0, 0, 20]} />
 
                         <HeroCamera isMobile={isMobile}>
-                            <HackerRoom
+                            <FutureKeyboard
                                 //scale={0.07}
                                 //position={[0, -5, 0]}
                                 //rotation={[0, 60, 0]}
                                 position={sizes.deskPosition}
-                                rotation={[0, -Math.PI, 0]}
+                                rotation={[.65, 0, 0]}
                                 scale={sizes.deskScale}
                             />
                         </HeroCamera>
                         <group>
                             <Target position={sizes.targetPosition} />
                             <ReactLogo position={sizes.reactLogoPosition} />
-                            <Cube position={sizes.cubePosition} />
+                            <Apple position={sizes.cubePosition} />
                             <Rings position={sizes.ringPosition} />
                         </group>
                         <ambientLight intensity={1} />
@@ -102,7 +102,7 @@ const Hero = () => {
 
             <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
                 <a href="#about" className="w-fit">
-                   <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm: min-w-96" />
+                   <Button name="Let's collaborate" isBeam containerClass="sm:w-fit w-full sm: min-w-96" />
                 </a>
             </div>
         </section>
