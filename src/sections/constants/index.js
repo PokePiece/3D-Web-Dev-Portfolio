@@ -101,9 +101,9 @@ export const navLinks = [
     },
     {
       title: 'Piano Dedication App - Piano Blog',
-      desc: "Access snippets of content on the world's best composers--from Beethoven to Chopin--and discover the hidden gems of classical music.",
+      desc: "Discover the timeless beauty of the piano with this interactive platform, offering users a deep dive into the instrument's history, mechanics, and iconic compositions. From Beethoven to Chopin, explore curated content that brings classical music to life, complete with the ability to play and experience famous works right on the site.",
       subdesc:
-        'A site that allows users to browse elaborate details on the history of the instruments, what makes it possible, and how they can learn more. It uses Tailwind CSS and is built with Vite.',
+        'Built with Vite and styled using Tailwind CSS, this piano website delivers a sleek, responsive, and engaging user experience. Designed for music enthusiasts and curious learners alike, it seamlessly combines educational resources with interactive elements to inspire a love for the piano and its rich heritage.',
       href: 'https://piano-dedication-app.vercel.app/',
       texture: '/textures/project/myproject2.mp4',
       logo: '/assets/piano-logo.svg',
