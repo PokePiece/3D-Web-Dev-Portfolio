@@ -1,6 +1,6 @@
 import { PerspectiveCamera } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
-import React, { Suspense } from 'react'
+import React, { Suspense, useEffect } from 'react'
 import CanvasLoader from '../components/CanvasLoader'
 import { Leva, useControls } from 'leva'
 import { xor } from 'three/tsl'
@@ -13,6 +13,8 @@ import HeroCamera from '../components/HeroCamera'
 import Button from '../components/Button'
 import FutureKeyboard from '../components/FutureKeyboard'
 import Apple from '../components/Apple'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap/all'
 
 const Hero = () => {
 
@@ -63,11 +65,24 @@ const Hero = () => {
 
     const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
+    const currentX = gsap.getProperty('#hero_tag', "x");
+
+        useGSAP(() => {
+            gsap.to("#hero_tag", {
+                x: 100, 
+                opacity: 1,
+                duration: 1.5,
+                ease: "power2.out",
+            });
+        })
+        
+ 
+
     return (
         <section className="min-h-screen border-2 border-purple-500 w-full flex-col relative" id="home">
             <div className="w-full mx-auto flex flex-col sm:mt-30 mt-24 c-space gap-3">
                 <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans">I <span className="text-purple-600">am</span> PokePiece </p>
-                <p className="hero_tag text-gray_gradient">Designing Tools & Legacies</p>
+                <p className="hero_tag text-gray_gradient relative"><span>Designer</span> of Tools & Legacies</p>
             </div>
 
             <div className="w-full h-full absolute inset-0">
@@ -102,7 +117,7 @@ const Hero = () => {
 
             <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
                 <a href="#about" className="w-fit">
-                   <Button name="Let's collaborate" isBeam containerClass="sm:w-fit w-full sm: min-w-96" />
+                    <Button name="Let's collaborate" isBeam containerClass="sm:w-fit w-full sm: min-w-96" />
                 </a>
             </div>
         </section>

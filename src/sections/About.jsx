@@ -25,7 +25,7 @@ const About = () => {
 
                         <div>
                             <p className="grid-headtext">Hi, I'm PokePiece</p>
-                            <p className="grid-subtext">With 1 year of experience, I have fine-tuned my skills in
+                            <p className="grid-subtext">A year of experience under my belt, I have fine-tuned my skills in
                                 full stack development, specializing in animations and 3D web design.</p>
                         </div>
                     </div>
@@ -76,14 +76,19 @@ const About = () => {
                                 <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
                             </a>
                         </div>
+
                     </div>
                 </div>
                 <div className="xl:col-span-2 xl:row-span-3">
                     <div className="grid-container">
                         <img src="/assets/grid3.png" alt="grid3" className="w-full sm:h-[266px] h-fit object-contain" />
                         <div>
-                            <p className="grid-headtext">My Passion for Coding</p>
-                            <p className="grid-subtext">I'm a little passionate about coding and love to learn new things.</p>
+                            <p className="grid-headtext">My Process</p>
+                            <p className="grid-subtext">I see coding as an architectural process, not just linear writing. 
+                                It requires understanding the full scope, planning thoroughly, and building a solid 
+                                foundation. I focus on three phases: <span className="font-bold">architecting, principled framework building, and 
+                                detailed implementation</span>, all while maintaining a clear, big-picture view for 
+                                efficiency and quality.</p>
                         </div>
                     </div>
                 </div>
