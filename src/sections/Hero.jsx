@@ -82,7 +82,7 @@ const Hero = () => {
         <section className="min-h-screen border-2 border-purple-500 w-full flex-col relative" id="home">
             <div className="w-full mx-auto flex flex-col sm:mt-30 mt-24 c-space gap-3">
                 <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans">I <span className="text-purple-600">am</span> PokePiece </p>
-                <p className="hero_tag text-gray_gradient relative"><span>Architect</span> of Tools & Legacies</p>
+                <p className="hero_tag text-gray_gradient relative"><span className='text-purple-600 opacity-0' id="hero_tag">Architect</span> of Tools & Legacies</p>
             </div>
 
             <div className="w-full h-full absolute inset-0">
