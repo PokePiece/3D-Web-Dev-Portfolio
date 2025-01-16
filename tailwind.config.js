@@ -22,6 +22,9 @@ export default {
           600: '#AFB0B6',
           500: '#62646C',
         },
+        lightRed: {
+          DEFAULT: '#f75d5d'
+        }
       },
       backgroundImage: {
         terminal: "url('/assets/terminal.png')",
